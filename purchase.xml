@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.property" id="property_purchase_warehouse">
+            <field name="field"
+                search="[('model.model', '=', 'purchase.purchase'), ('name', '=', 'warehouse')]"/>
+            <field name="value" eval="'purchase.configuration,' + str(ref('warehouse'))"/>
+        </record>
+    </data>
+</tryton>
