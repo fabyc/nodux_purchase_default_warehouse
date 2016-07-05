@@ -5,11 +5,10 @@ from trytond.pyson import Eval, Bool
 from trytond.pool import Pool, PoolMeta
 
 __all__ = ['Configuration']
-__metaclass__ = PoolMeta
 
 class Configuration():
+    __metaclass__ = PoolMeta
     __name__ = 'purchase.configuration'
-    
+
     warehouse = fields.Property(fields.Many2One('stock.location', 'Warehouse',
         domain=[('type', '=', 'warehouse')]))
-        

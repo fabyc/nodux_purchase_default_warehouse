@@ -7,10 +7,10 @@ from trytond import backend
 from trytond.pool import Pool, PoolMeta
 
 __all__ = ['Purchase']
-__metaclass__ = PoolMeta
+
 
 class Purchase():
-    'Purchase'
+    __metaclass__ = PoolMeta
     __name__ = 'purchase.purchase'
     _rec_name = 'reference'
 
